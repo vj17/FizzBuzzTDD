@@ -4,10 +4,17 @@ import org.junit.jupiter.api.Assertions;
 
 class FizzBuzzTest {
 
+    FizzBuzz fizzbuzz = new FizzBuzz();
+
     @Test
     public void testFizzForPositiveMultipleOf3() {
-        FizzBuzz fizzbuzz = new FizzBuzz();
         int num = 27;
         Assertions.assertEquals("Fizz",fizzbuzz.generateFizzBuzz(num));
+    }
+
+    @Test
+    public void testBuzzForPositiveMultipleOf5() {
+        int num = 25;
+        Assertions.assertEquals("Buzz", fizzbuzz.generateFizzBuzz(num));
     }
 }
