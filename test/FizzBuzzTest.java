@@ -23,4 +23,10 @@ class FizzBuzzTest {
         int num = 45;
         Assertions.assertEquals("FizzBuzz", fizzbuzz.generateFizzBuzz(num));
     }
+
+    @Test
+    public void testFizzBuzzFor0() {
+        int num = 0;
+        Assertions.assertEquals("FizzBuzz", fizzbuzz.generateFizzBuzz(0));
+    }
 }
