@@ -14,7 +14,7 @@ Test Cases:
 4. 0 => "FizzBuzz" - passed
 5. -3 => "Fizz" - passed
 6. -10 => "Buzz" - passed
-7. -15 => "FizzBuzz"
+7. -15 => "FizzBuzz" - passed
 8. 1 => "1", 2 => "2", 3 => "3", 4 => "4"
 9. "Abcd" => error message to correct the user
 10. " " => error message to correct the user

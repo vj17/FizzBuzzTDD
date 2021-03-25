@@ -47,4 +47,10 @@ class FizzBuzzTest {
         int num = -15;
         Assertions.assertEquals("FizzBuzz", fizzbuzz.generateFizzBuzz(num));
     }
+
+    @Test
+    public void testFizzBuzzForNumbersThatAreNotMultiplesOf3And5() {
+        int num = 4;
+        Assertions.assertEquals("4", fizzbuzz.generateFizzBuzz(num));
+    }
 }
