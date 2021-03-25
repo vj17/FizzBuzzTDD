@@ -66,8 +66,20 @@ class FizzBuzzTest {
     }
 
     @Test
+    public void testFizzBuzzForEmptyString() {
+        try {
+            String str = " ";
+            Assertions.assertEquals(" ", fizzbuzz.generateFizzBuzz(str));
+        }
+        catch (NumberFormatException e) {
+            System.out.println("Enter numbers only");
+        }
+    }
+
+    @Test
     public void testFizzBuzzForStringsContainingNumbers() {
         String str = "34";
         Assertions.assertEquals("34", fizzbuzz.generateFizzBuzz(str));
     }
+
 }
