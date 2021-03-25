@@ -29,4 +29,10 @@ class FizzBuzzTest {
         int num = 0;
         Assertions.assertEquals("FizzBuzz", fizzbuzz.generateFizzBuzz(0));
     }
+
+    @Test
+    public void testFizzForNegativeMultipleOf3() {
+        int num = -3;
+        Assertions.assertEquals("Fizz",fizzbuzz.generateFizzBuzz(num));
+    }
 }
