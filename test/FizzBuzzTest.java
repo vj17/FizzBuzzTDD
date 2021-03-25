@@ -58,10 +58,10 @@ class FizzBuzzTest {
     public void testFizzBuzzForStringsContainingAlphabets() {
         try {
             String str = "abcd";
-            Assertions.assertEquals("Enter numbers only", fizzbuzz.generateFizzBuzz(str));
+            Assertions.assertEquals("Enter integers only", fizzbuzz.generateFizzBuzz(str));
         }
         catch (NumberFormatException e) {
-            System.out.println("Enter numbers only");
+            System.out.println(e.getMessage() + " Enter integers only");
         }
     }
 
@@ -69,10 +69,10 @@ class FizzBuzzTest {
     public void testFizzBuzzForEmptyString() {
         try {
             String str = " ";
-            Assertions.assertEquals(" ", fizzbuzz.generateFizzBuzz(str));
+            Assertions.assertEquals("Enter integers only", fizzbuzz.generateFizzBuzz(str));
         }
         catch (NumberFormatException e) {
-            System.out.println("Enter numbers only");
+            System.out.println(e.getMessage() + " Enter integers only");
         }
     }
 
@@ -80,6 +80,72 @@ class FizzBuzzTest {
     public void testFizzBuzzForStringsContainingNumbers() {
         String str = "34";
         Assertions.assertEquals("34", fizzbuzz.generateFizzBuzz(str));
+    }
+
+    @Test
+    public void testFizzForPositiveDecimalMultipleOf3() {
+        try {
+            double num = 2.7;
+            Assertions.assertEquals("Enter integers only",fizzbuzz.generateFizzBuzz(num));
+        }
+        catch (NumberFormatException e) {
+            System.out.println(e.getMessage() + " Enter integers only");
+        }
+    }
+
+    @Test
+    public void testFizzForNegativeDecimalMultipleOf3() {
+        try {
+            double num = -2.7;
+            Assertions.assertEquals("Enter integers only",fizzbuzz.generateFizzBuzz(num));
+        }
+        catch (NumberFormatException e) {
+            System.out.println(e.getMessage() + " Enter integers only");
+        }
+    }
+
+    @Test
+    public void testFizzForPositiveDecimalMultipleOf5() {
+        try {
+            double num = 2.5;
+            Assertions.assertEquals("Enter integers only",fizzbuzz.generateFizzBuzz(num));
+        }
+        catch (NumberFormatException e) {
+            System.out.println(e.getMessage() + " Enter integers only");
+        }
+    }
+
+    @Test
+    public void testFizzForNegativeDecimalMultipleOf5() {
+        try {
+            double num = -2.5;
+            Assertions.assertEquals("Enter integers only",fizzbuzz.generateFizzBuzz(num));
+        }
+        catch (NumberFormatException e) {
+            System.out.println(e.getMessage() + " Enter integers only");
+        }
+    }
+
+    @Test
+    public void testFizzForPositiveDecimalMultiplesOf3And5() {
+        try {
+            double num = 4.5;
+            Assertions.assertEquals("Enter integers only",fizzbuzz.generateFizzBuzz(num));
+        }
+        catch (NumberFormatException e) {
+            System.out.println(e.getMessage() + " Enter integers only");
+        }
+    }
+
+    @Test
+    public void testFizzForNegativeDecimalMultiplesOf3And5() {
+        try {
+            double num = -1.5;
+            Assertions.assertEquals("Enter integers only",fizzbuzz.generateFizzBuzz(num));
+        }
+        catch (NumberFormatException e) {
+            System.out.println(e.getMessage() + " Enter integers only");
+        }
     }
 
 }

@@ -16,8 +16,11 @@ Test Cases:
 6. -10 => "Buzz" - passed
 7. -15 => "FizzBuzz" - passed
 8. 1 => "1", 2 => "2", 3 => "3", 4 => "4" - passed
-9. "Abcd" => error message to correct the user - passed
-10. " " => error message to correct the user
-11. 1.5 => "FizzBuzz", 4.5 => "FizzBuzz"
-12. 2.5 => "Buzz"
-13. 2.7 => "Fizz"
+9. "Abcd" => error message ("Enter integers only") - passed
+10. " " => error message ("Enter integers only") - passed
+11. 2.7 =>  error message ("Enter integers only") - passed
+12. -2.7 => error message ("Enter integers only") - passed
+13. 2.5 => error message ("Enter integers only") - passed
+14. -2.5 => error message ("Enter integers only") - passed
+13. 1.5 => error message ("Enter integers only") - passed
+14. -1.5 => error message ("Enter integers only") - passed
