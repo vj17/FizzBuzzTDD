@@ -27,7 +27,7 @@ class FizzBuzzTest {
     @Test
     public void testFizzBuzzFor0() {
         int num = 0;
-        Assertions.assertEquals("FizzBuzz", fizzbuzz.generateFizzBuzz(0));
+        Assertions.assertEquals("FizzBuzz", fizzbuzz.generateFizzBuzz(num));
     }
 
     @Test
@@ -52,5 +52,22 @@ class FizzBuzzTest {
     public void testFizzBuzzForNumbersThatAreNotMultiplesOf3And5() {
         int num = 4;
         Assertions.assertEquals("4", fizzbuzz.generateFizzBuzz(num));
+    }
+
+    @Test
+    public void testFizzBuzzForStringsContainingAlphabets() {
+        try {
+            String str = "abcd";
+            Assertions.assertEquals("Enter numbers only", fizzbuzz.generateFizzBuzz(str));
+        }
+        catch (NumberFormatException e) {
+            System.out.println("Enter numbers only");
+        }
+    }
+
+    @Test
+    public void testFizzBuzzForStringsContainingNumbers() {
+        String str = "34";
+        Assertions.assertEquals("34", fizzbuzz.generateFizzBuzz(str));
     }
 }

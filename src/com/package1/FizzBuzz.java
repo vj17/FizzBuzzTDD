@@ -1,7 +1,9 @@
 package com.package1;
 
 public class FizzBuzz {
-    public String generateFizzBuzz(int num) {
+    public String generateFizzBuzz(Object o){
+
+        int num = (Integer.parseInt(o.toString()));
 
         if (num % 3 == 0 && num % 5 == 0)
             return "FizzBuzz";
