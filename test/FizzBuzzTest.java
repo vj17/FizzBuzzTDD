@@ -17,4 +17,10 @@ class FizzBuzzTest {
         int num = 25;
         Assertions.assertEquals("Buzz", fizzbuzz.generateFizzBuzz(num));
     }
+
+    @Test
+    public void testFizzBuzzForPositiveMultiplesOf3And5() {
+        int num = 45;
+        Assertions.assertEquals("FizzBuzz", fizzbuzz.generateFizzBuzz(num));
+    }
 }
